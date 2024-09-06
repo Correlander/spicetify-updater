@@ -17,7 +17,7 @@ if (-not (Test-Path -Path $directoryPath)) {
 }
 
 # Check if the file exists
-if (-not (Test-Path -Path $filePath)) {
+if (-not (Test-Path -Path $updaterFilePath)) {
     # If not, download the file
     Invoke-WebRequest -Uri $updaterFileUrl -OutFile $updaterFilePath
     Invoke-WebRequest -Uri $licenseFileUrl -OutFile $licenseFilePath
