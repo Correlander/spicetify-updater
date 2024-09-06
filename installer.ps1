@@ -5,7 +5,8 @@ Read-Host "Press Enter to continue..."
 # Define the directory and file paths
 $directoryPath = "$env:LOCALAPPDATA\SpicetifyUpdater"
 $fileName = "Updater.ps1"
-$filePath = Join-Path -Path $directoryPath -ChildPath $fileName
+$updaterFilePath = Join-Path -Path $directoryPath -ChildPath "Updater.ps1"
+$licenseFilePath = Join-Path -Path $directoryPath -ChildPath "LICENSE"
 $updaterFileUrl = "https://raw.githubusercontent.com/Correlander/spicetify-updater/main/Updater.ps1"
 $licenseFileUrl = "https://raw.githubusercontent.com/Correlander/spicetify-updater/main/LICENSE"
 
@@ -18,8 +19,8 @@ if (-not (Test-Path -Path $directoryPath)) {
 # Check if the file exists
 if (-not (Test-Path -Path $filePath)) {
     # If not, download the file
-    Invoke-WebRequest -Uri $updaterFileUrl -OutFile Join-Path -Path $directoryPath -ChildPath "Updater.ps1"
-    Invoke-WebRequest -Uri $licenseFileUrl -OutFile Join-Path -Path $directoryPath -ChildPath "LICENSE"
+    Invoke-WebRequest -Uri $updaterFileUrl -OutFile $updaterFilePath
+    Invoke-WebRequest -Uri $licenseFileUrl -OutFile $licenseFilePath
     Write-Output "Downloaded $fileName to $directoryPath."
 } else {
     Write-Output "$fileName already exists in $directoryPath."
