@@ -5,7 +5,7 @@ $blue = "`e[34m"
 $reset = "`e[0m"
 
 # Fluff
-Write-Host "${bold}${green}Spicetify Installer Script v1.1${reset}"
+Write-Host "${bold}${green}Spicetify Updater Install Script v1.1${reset}"
 Write-Host "Copyright (c) 2024 Correlander - MIT License"
 Write-Host "https://github.com/Correlander/spicetify-updater]"
 
