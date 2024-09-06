@@ -23,7 +23,7 @@ function Write-Log {
 # This print message is because I have the window to start as minimized. If someone clicks on it, I want it to say what it's doing.
 # A non-descript powershell window running on startup is scary, even if you know you installed a script that runs on startup
 # It also is just fancy and fun ;p
-Write-Log("${bold}${green}Spicetify Updater Script${reset}")
+Write-Log("${bold}${green}Spicetify Updater Script v1.2${reset}")
 Write-Log("Copyright (c) 2024 Correlander - MIT License")
 Write-Log("https://github.com/Correlander/spicetify-updater]")
 
